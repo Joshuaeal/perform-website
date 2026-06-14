@@ -383,12 +383,22 @@ nav {
 }
 
 /* IFRAME PLACEHOLDER */
+#slide-5 {
+  padding: 0;
+  justify-content: stretch;
+}
+#slide-5 > *:not(.iframe-container) {
+  display: none;
+}
 .iframe-container {
-  border: 1px solid rgba(254,89,17,0.3);
-  border-radius: 12px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   background: rgba(5,9,13,0.8);
   position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .iframe-label {
   position: absolute;
@@ -976,7 +986,7 @@ nav {
   <div style="margin-top:24px;max-width:1200px;margin-left:auto;margin-right:auto;">
     <div class="iframe-container">
       <div class="iframe-label">live demo</div>
-      <iframe src="https://demo.raconteur.melbourne/dashboard" style="width:100%;height:700px;border:none;display:block;" allowfullscreen></iframe>
+      <iframe src="https://demo.raconteur.melbourne/dashboard" style="width:100%;flex:1;border:none;display:block;min-height:100vh;" allowfullscreen></iframe>
     </div>
   </div>
 </section>
